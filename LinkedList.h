@@ -1,5 +1,5 @@
 //
-// Created by sarra on 3/30/2020.
+// Created by Bennett on 4/8/2020.
 //
 
 #ifndef BINARYINSERTIONSORT_LINKEDLIST_H
@@ -15,17 +15,19 @@ public:
     //Constructors
     LinkedList();
     LinkedList(const LinkedList & list);
+    LinkedList(Node* hed); //added by us
 
     //Assignment Operator
-    LinkedList &operator=(const LinkedList & rhs);
+    LinkedList &operator=(const LinkedList&  rhs);
+    //fix with Dr. A later
 
     //Destructor
     ~LinkedList();
 
     //Functions. You may not need to use them all
-    void append(YourClass obj);
-    bool Delete (YourClass obj);
-    YourClass find (YourClass obj)
+    void append(Dog obj);
+    bool Delete (Dog obj);
+    Dog find (Dog obj);
     void printList();
     void InsertionSort();
 
@@ -33,5 +35,7 @@ private:
     Node* head;
 
 };
+
+
 
 #endif //BINARYINSERTIONSORT_LINKEDLIST_H

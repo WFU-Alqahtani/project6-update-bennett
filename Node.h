@@ -1,10 +1,10 @@
 #ifndef NODE_H
 #define NODE_H
-
+#include "Dog.h"
 class Node {
 public:
     // Node constructor
-    Node(YourClass v , Node* n = nullptr)
+    Node(Dog v , Node* n = nullptr)
     {
         value = v;
         next = n;
@@ -17,7 +17,7 @@ public:
     friend class LinkedList;
 private:
 
-    YourClass value;
+    Dog value;
     Node* next;
 
 };

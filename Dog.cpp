@@ -4,10 +4,20 @@
 
 #include "Dog.h"
 Dog::Dog(string named){
-    name=named;
+    name= new string;
+    *name=named;
+}
+Dog::Dog(){
+
 }
 Dog& Dog::operator=(Dog d){
-    using std::swap;
-    swap(this, &d);
+    swap(this->name, d.name);
     return *this;
+}
+bool Dog::operator<(Dog d){
+    return (this->name<d.name);
+}
+Dog::Dog(const Dog& origDog){
+    name = new string;
+    *name=*(origDog.name);
 }

@@ -9,10 +9,13 @@
 using namespace std;
 class Dog {
 private:
-    string name;
+    string* name;
 public:
     Dog(string named);
+    Dog();
     Dog& operator=(Dog d);
+    bool operator<(Dog d);
+    Dog(const Dog& origDog);
 };
 
 
