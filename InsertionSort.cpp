@@ -74,4 +74,6 @@ int main() {
     double elapsed_Binary = double(endBinarySort-startBinarySort);
     double elapsed_Insertion = double(endInsertionSort-startInsertionSort);
 
+    cout<<"BinaryInsertionSort took "<<elapsed_Binary<<" milliseconds for "<<length<<" items"<<endl;
+    cout<<"InsertionSortLinkedList took "<<elapsed_Insertion<<" milliseconds for "<<length<<" items"<<endl;
 }
