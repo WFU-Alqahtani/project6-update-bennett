@@ -2,9 +2,10 @@
 #define BINARYINSERTIONSORT_H
 
 #include <vector>
+#include "Dog.h"
 using namespace std;
 
-int binarySearch(vector<YourClass> a, int item, int low, int high);
-void insertionSort(vector<YourClass> &a, int n);
+int binarySearch(vector<Dog> a, int item, int low, int high);
+void insertionSort(vector<Dog> &a, int n);
 
 #endif //BINARYINSERTIONSORT_H

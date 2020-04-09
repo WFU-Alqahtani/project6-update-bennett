@@ -14,7 +14,10 @@ public:
     Dog(string named);
     Dog();
     Dog& operator=(Dog d);
+    bool operator>(Dog d);
     bool operator<(Dog d);
+    bool operator==(Dog d);
+    void operator<<(Dog d);
     Dog(const Dog& origDog);
 };
 

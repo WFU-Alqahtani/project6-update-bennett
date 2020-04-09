@@ -20,8 +20,12 @@ LinkedList::LinkedList(const LinkedList& list) {
     }
 }
 LinkedList& LinkedList::operator=(const LinkedList& rhs){
-    swap(this.head,rhs.head);
+    //swap(this.head,rhs.head);
+    //return *this;
+    LinkedList temp(rhs);
+    std::swap(temp.head,head);
     return *this;
+
 }
 //fix with Dr. A later above
 

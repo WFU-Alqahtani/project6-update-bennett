@@ -29,11 +29,11 @@ int main() {
         //call constructor to create object from input stream
         Dog* d = new Dog(name);
         //add object to vector sequentially
-        v.at(index)=d;
+        v.at(index)=*d;
         index++;
     }
 
-    vector<YourClass> v;
+    //vector<Dog> v;
 
     // populate the vector with the data from your data set
 
@@ -42,13 +42,13 @@ int main() {
 
     // check if sorted
     for (int i = 1; i < v.size(); i++) {
-        assert(v[i-1] <= v[i]);
+        assert(&v[i-1] <= &v[i]);
     }
 
     // print out sorted list
     for (int i = 0; i < v.size(); i++) {
         //you should ovrride << to YourClass
-        cout << v[i] << endl;
+        cout << &v[i] << endl;
     }
 
     // FINISH ME
