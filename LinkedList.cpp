@@ -38,3 +38,46 @@ LinkedList::~LinkedList(){
        currentNode=next;
     }
 }
+void LinkedList::InsertionSort() {
+    Node *currentNode = head->next;
+    Node *sort = head;
+    Node *index = head->next;
+    Node *trails = head;
+
+    if (currentNode->value < head->value) {
+        currentNode = currentNode->next;
+        trails->next = index->next;
+        index->next = head;
+        head = index;
+        sort = trails;
+    } else {
+        currentNode = currentNode->next;
+        sort = sort->next;
+    }
+    index = head->next;
+    trails = head;
+    while (currentNode != nullptr) {
+        if (currentNode->value > sort->value) {
+            currentNode = currentNode->next;
+            sort = sort->next;
+        }
+        else if(currentNode->value<head->value){
+            sort->next=currentNode->next;
+            currentNode->next=trails;
+            head=currentNode;
+            currentNode=sort->next;
+        }
+        else{
+            while(!(index->value>currentNode->value)){
+                index=index->next;
+                trails=trails->next;
+            }
+            sort->next=currentNode->next;
+            currentNode->next=index;
+            trails->next=currentNode;
+            currentNode=sort->next;
+        }
+        trails=head;
+        index=head->next;
+    }
+}

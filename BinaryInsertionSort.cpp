@@ -23,8 +23,8 @@ void insertionSort(vector<Dog> &a, int n) {
 
     for (int i = 1; i < n; i++) {
         int j = i - 1;
-        int selected = a[i]; //this was the original code, but I don't understand the algorithm well enough to troubleshoot
-
+        Dog selected = a[i]; //this was the original code except type int, but I don't understand the algorithm well enough to troubleshoot
+    //do we need to overload = so that a string can be assigned to an int via total ASCII count?
 
         // find location where selected should be inserted
         int loc = binarySearch(a, selected, 0, j);
