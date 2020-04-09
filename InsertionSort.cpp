@@ -6,7 +6,13 @@
 #include "Node.h"
 #include "Dog.h"
 #include "LinkedList.h"
-
+/* Andrew Sullivan, Bennett Gould, and Octavio Muro
+ * Project 6
+ * Binary and Insertion sort of a vector and linked list via piped data from dogNames csv
+ * That has all of the dog names and number of each recorded in NY city
+ *
+ *
+ */
 using namespace std;
 
 int main() {
