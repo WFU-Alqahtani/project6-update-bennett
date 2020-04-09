@@ -2,6 +2,7 @@
 #include <vector>
 #include <cassert>
 #include <fstream>
+#include <ctime>
 #include "BinaryInsertionSort.h"
 #include "Node.h"
 #include "Dog.h"
@@ -47,7 +48,9 @@ int main() {
     // populate the vector with the data from your data set
 
     // binary insertion sort
+    clock_t startBinarySort = clock();
     insertionSort(v, v.size());
+    clock_t endBinarySort = clock();
 
     // check if sorted
     for (int i = 1; i < v.size(); i++) {
@@ -63,7 +66,12 @@ int main() {
     // FINISH ME
     cout<<endl;
     test->printList();
+    clock_t startInsertionSort = clock();
     test->InsertionSort();
+    clock_t endInsertionSort = clock();
     test->printList();
+
+    double elapsed_Binary = double(endBinarySort-startBinarySort);
+    double elapsed_Insertion = double(endInsertionSort-startInsertionSort);
 
 }
