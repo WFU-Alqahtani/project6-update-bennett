@@ -18,7 +18,7 @@ public:
     LinkedList(Node* hed); //added by us
 
     //Assignment Operator
-    LinkedList &operator=(const LinkedList&  rhs);
+    LinkedList& operator=(const LinkedList&  rhs);
     //fix with Dr. A later
 
     //Destructor

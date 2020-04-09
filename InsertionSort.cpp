@@ -23,6 +23,7 @@ int main() {
     cout<<"How many items do you want to sort?"<<endl;
     cin>>length;
     vector<Dog> v(length);
+    LinkedList *test = new LinkedList();
     getline(ip,name,'\n');
     while(ip.good()&&index<length){
         getline(ip,name,',');
@@ -31,6 +32,7 @@ int main() {
         Dog* d = new Dog(name);
         //add object to vector sequentially
         v.at(index)=*d;
+        test->append(*d);
         index++;
     }
 
@@ -43,17 +45,19 @@ int main() {
 
     // check if sorted
     for (int i = 1; i < v.size(); i++) {
-        assert(&v[i-1] <= &v[i]);
+        //assert(v[i-1].getValue() <= v[i].getValue());
     }
 
     // print out sorted list
     for (int i = 0; i < v.size(); i++) {
         //you should ovrride << to YourClass
-        cout << &v[i] << endl;
+        cout << v[i].getValue() << endl;
     }
 
     // FINISH ME
-
-
+    cout<<endl;
+    test->printList();
+    test->InsertionSort();
+    test->printList();
 
 }

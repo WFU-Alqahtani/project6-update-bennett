@@ -21,6 +21,7 @@ bool Dog::operator<(Dog d){
     return (this->name<d.name);
 }
 //wanted to use std::string::compare but couldn't get it to work - I don't think this type of comparison is accepted
+//overloaded operator need by reference
 bool Dog::operator==(Dog d){
 
     if(this->name==d.name){
@@ -31,9 +32,15 @@ bool Dog::operator==(Dog d){
     }
 }
 void Dog::operator<<(Dog d){
-    std::cout<<d.name;
+    std::cout<<d.name<<" "<<endl;
+}
+bool Dog::operator>=(Dog d){
+    return(this->name>=d.name);
 }
 Dog::Dog(const Dog& origDog){
     name = new string;
     *name=*(origDog.name);
+}
+string Dog::getValue(){
+    return *name;
 }

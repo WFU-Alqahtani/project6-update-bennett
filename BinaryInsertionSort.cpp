@@ -1,7 +1,7 @@
 #include "BinaryInsertionSort.h"
 using namespace std;
 
-int binarySearch(vector<Dog> a, Dog item, int low, int high) {
+int binarySearch(vector<Dog> &a, Dog item, int low, int high) {
     if (high <= low) {
         return (item > a[low] ? (low + 1) : low);
     }
@@ -19,7 +19,7 @@ int binarySearch(vector<Dog> a, Dog item, int low, int high) {
         return binarySearch(a, item, low, mid - 1); // look left
 }
 
-void insertionSort(vector<Dog> &a, int n) {
+void insertionSort(vector<Dog> a, int n) {
 
     for (int i = 1; i < n; i++) {
         int j = i - 1;

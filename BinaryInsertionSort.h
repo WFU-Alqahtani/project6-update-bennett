@@ -5,7 +5,7 @@
 #include "Dog.h"
 using namespace std;
 
-int binarySearch(vector<Dog> a, int item, int low, int high);
-void insertionSort(vector<Dog> &a, int n);
+int binarySearch(vector<Dog> &a, int item, int low, int high);
+void insertionSort(vector<Dog> a, int n);
 
 #endif //BINARYINSERTIONSORT_H

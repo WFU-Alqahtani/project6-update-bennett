@@ -17,8 +17,10 @@ public:
     bool operator>(Dog d);
     bool operator<(Dog d);
     bool operator==(Dog d);
+    bool operator>=(Dog d);
     void operator<<(Dog d);
     Dog(const Dog& origDog);
+    string getValue();
 };
 
 
